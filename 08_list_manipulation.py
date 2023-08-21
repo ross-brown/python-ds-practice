@@ -40,3 +40,22 @@ def list_manipulation(lst, command, location, value=None):
         >>> list_manipulation(lst, 'add', 'dunno') is None
         True
     """
+
+    if not (command == "add" or command == "remove"):
+        return None
+
+    if (location == "beginning"):
+        if (command == "add"):
+            lst.insert(0,value)
+            return lst
+        else:
+            return lst.pop(0)
+
+    if(location == "end"):
+        if(command == "add"):
+            lst.append(value)
+            return lst
+        else:
+            return lst.pop()
+
+# any way to avoid if/else chains?
