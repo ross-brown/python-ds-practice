@@ -8,10 +8,4 @@ def frequency(lst, search_term):
         0
     """
 
-    count = 0
-
-    for item in lst:
-        if item == search_term:
-            count += 1
-
-    return count
+    return lst.count(search_term)

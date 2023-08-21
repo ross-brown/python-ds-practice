@@ -22,24 +22,6 @@ def is_palindrome(phrase):
         True
     """
 
-    no_space_phrase = phrase.replace(" ", "")
-    lowerd_phrase = no_space_phrase.lower()
+    lowerd_phrase = phrase.replace(" ", "").lower()
 
-    # letters = [char for char in lowerd_phrase]
-
-    # letters.reverse()
-
-    # reversed = ''.join(letters)
-
-    # return reversed == lowerd_phrase
-
-    start = 0
-    end = len(lowerd_phrase) - 1
-
-    while start < end:
-        if not lowerd_phrase[start] == lowerd_phrase[end]:
-            return False
-        else:
-            start += 1
-            end -= 1
-    return True
+    return lowerd_phrase[::-1] == lowerd_phrase
