@@ -11,3 +11,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    max_item = None
+    max_count = 0
+
+    for num in nums:
+        if nums.count(num) > max_count:
+            max_item = num
+
+    return max_item
+
+
+    
